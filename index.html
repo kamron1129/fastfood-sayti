@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yammi Bite — Fast-food kafe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blobs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+<header class="top glass">
+  <a class="logo" href="#top">Yammi<b>Bite</b></a>
+  <div class="clock"><span id="time">--:--:--</span><small id="date"></small></div>
+  <span class="status" id="status"></span>
+  <button class="cartbtn" id="openCart" aria-label="Savatni ochish">🛒 <span id="count">0</span></button>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div>
+      <h1>Tez. Issiq. Juda mazali.</h1>
+      <p>Burger, lavash, pitsa, hot-dog va ichimliklar. Tanlang, hisoblang, chekni chop eting.</p>
+      <a class="btn" href="#menu">Menyuni ochish</a>
+    </div>
+    <div class="art glass" aria-hidden="true"><span>🍔</span><span>🍟</span><span>🍕</span><span>🥤</span></div>
+  </section>
+
+  <section id="menu" class="wrap">
+    <h2>Menyu</h2>
+    <div class="tools">
+      <div class="tabs" id="tabs"></div>
+      <input id="search" class="glass" type="search" placeholder="Taom qidirish..." aria-label="Qidirish">
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="wrap info">
+    <div class="glass"><h3>Ish vaqti</h3><p>Har kuni 09:00 dan 02:00 gacha</p></div>
+    <div class="glass"><h3>Manzil</h3><p>Toshkent sh., Amir Temur ko'chasi, 12</p></div>
+    <div class="glass"><h3>Aloqa</h3><p>+998 90 123 45 67</p></div>
+    <div class="glass"><h3>Yetkazib berish</h3><p>Shahar bo'ylab 12 000 so'mdan, 30 daqiqada</p></div>
+  </section>
+</main>
+<footer>© 2026 Yammi Bite. Mazali taomlar — har kuni.</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer glass" id="drawer" aria-label="Savat">
+  <div class="dhead"><h2>Buyurtma</h2><button class="x" id="closeCart" aria-label="Yopish">✕</button></div>
+  <div class="lines" id="lines"></div>
+  <div class="opts">
+    <label>Turi
+      <select id="type"><option value="zal">Zalda (xizmat 10%)</option><option value="olib">Olib ketish</option><option value="yetkaz">Yetkazib berish (+12 000)</option></select>
+    </label>
+    <label id="tableBox">Stol raqami <input id="table" type="number" min="1" max="99" placeholder="Masalan: 5"></label>
+    <label>Ism <input id="name" type="text" placeholder="Ixtiyoriy"></label>
+  </div>
+  <dl class="sum">
+    <div><dt>Taomlar</dt><dd id="sub">0</dd></div>
+    <div><dt>Xizmat / yetkazish</dt><dd id="fee">0</dd></div>
+    <div class="tot"><dt>Jami</dt><dd id="total">0</dd></div>
+  </dl>
+  <button class="btn wide" id="checkout">Hisoblash va chek chiqarish</button>
+  <button class="link" id="clear">Savatni tozalash</button>
+</aside>
+
+<div class="modal" id="modal">
+  <div class="rc" id="receipt"></div>
+  <div class="mbtns"><button class="btn" id="print">🖨 Chek chop etish</button><button class="btn alt" id="newOrder">Yangi buyurtma</button></div>
+</div>
+
+<script src="menu.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
